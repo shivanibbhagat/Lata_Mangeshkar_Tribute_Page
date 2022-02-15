@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    width: 100%;
+    min-height: 100vh;
+    color: rgb(15, 15, 94);
+    position: relative;
+    background-image: -webkit-linear-gradient(rgba(224, 217, 217, 0.65),rgba(224, 217, 217, 0.65)),url(Images/music1.png);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.logo{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10%;
+    animation: movedown 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes movedown{
+    0%{
+        transform: translateY(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+.nav-links{
+    text-align: right;
+    background: rgb(15, 15, 94);
+    padding: 10px 30px;
+    border-bottom-left-radius: 18px;
+    animation: movedown 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.left-sidebar{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(15, 15, 94);
+}
+.row{
+    padding: 0 10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 5%;
+}
+.left-col{
+    flex-basis: 40%;
+}
+.right-col{
+    flex-basis: 55%;
+}
+.left-col img{
+    width: 80%;
+    cursor: pointer;
+    filter: grayscale(0);
+    transition: filter 1s;
+}
+.left-col img:hover{
+    filter: grayscale(1); 
+}
+.right-col h1{
+    font-size: 70px;
+    font-weight: 700;
+}
+.right-col h4{
+    color:black;
+    font-size: 35px;
+    font-weight: 500;
+    margin: 20px 0 70px;
+}
+
+/*--------Biography--------*/
+
+.biography{
+    width: 100%;
+    height: 130vh;
+    padding: 0 8%;
+    background-image: -webkit-linear-gradient(rgba(224, 217, 217, 0.65),rgba(224, 217, 217, 0.65)),url(Images/Lata-Mangeshkar.jpg);
+}
+.biography h1{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    color: rgb(15, 15, 94);
+}
+.biography h1::after{
+    content: '';
+    background: black;
+    width: 225px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 30px; 
+}
+.biography-col{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+h3{
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.biography-col:hover{
+    /*background: #303ef7;*/
+    background: rgb(15, 15, 94);
+    color: #fff;
+    transform: scale(1.05s);
+}
+
+/*----------Awards-----------*/
+.awards{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 8%;
+}
+.awards h1{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    color: rgb(15, 15, 94);
+}
+.awards h1::after{
+    content: '';
+    background: black;
+    width: 225px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.img img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    cursor: pointer;
+}
+
+/*------Call to action---------*/
+.cta{
+    margin: 100px auto;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: rgb(15, 15, 94);
+    margin-bottom: 40px;
+    font-size: 50px;
+    padding: 0;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(15, 15, 94);
+    border: 1px solid rgb(15, 15, 94);
+    padding: 12px 34px;
+    font-size: 16px;
+    font-weight: 600px;
+    font-family: 30px;
+    background: transparent;
+    position: relative;
+    cursor: pointer; 
+    margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 30px;
+ }
+ .hero-btn:hover{
+     border: 1px solid #fff;
+     color: #fff;
+     background: rgb(15, 15, 94);
+     transition: 1s;
+ }
+
+/*-------footer-------*/
+.footer{
+    position: relative;
+    background-image: -webkit-linear-gradient(rgb(15, 15, 94),rgb(0,0,0,0.9)),url(Images/blue.jpg);
+}
+.footer h2{
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-weight: 100px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    padding: 80px 0 50px;
+    color: #fff;
+    text-align: center;
+}
+.social-media{
+   display: flex;
+   justify-content: center;
+   padding-bottom: 90px;
+}
+.social-media a{
+    display: flex;
+    background: rgb(250, 239, 220);
+    height: 75px;
+    width: 75px;
+    margin: 0 15px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+               -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0.01);
+    transition: transform 0.5s;
+}
+.social-media a i{
+    font-size: 35px;
+    color: #777;
+    transition: transform 0.5s;
+}
+.social-media a:hover{
+    border: 1px solid rgba(0,0,0,0.01);
+}
+.social-media a:hover i{
+    transform: scale(0.90);
+}
+.social-media a:hover .fa-facebook{
+    color: #3b5998;
+}
+.social-media a:hover .fa-twitter{
+    color: #00acee;
+}
+.social-media a:hover .fa-instagram{
+    color: #f14843;
+}
+.social-media a:hover .fa-linkedin{
+    color: #3b5998;
+}
+
